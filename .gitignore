@@ -4,9 +4,11 @@
 # logs
 *.log
 
-# binaries
+# builds
 /dist
 /build
+/internal/static
+/internal/migrations
 
 # certificates
 /certs
