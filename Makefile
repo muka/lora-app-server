@@ -37,7 +37,7 @@ ui:
 	@rm -f static/index.html
 	@rm -rf static/static
 	@rm -rf ui/build
-	@cd ui && npm run build
+	@cd ui && sh ./build.sh
 	@mv ui/build/* static
 	@echo "Don't forget to run make statics to include the static files in the Go code!"
 
@@ -61,8 +61,8 @@ requirements:
 	@go get -u github.com/jteeuwen/go-bindata/...
 
 ui-requirements:
-	@echo "Installing UI requirements"
-	@cd ui && npm install
+	# @echo "Installing UI requirements"
+	# @cd ui && npm install
 
 serve: build
 	@echo "Starting Lora App Server"
